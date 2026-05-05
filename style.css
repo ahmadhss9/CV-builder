@@ -225,6 +225,16 @@ header p {
     transform: translateY(-2px);
 }
 
+#downloadPdfBtn {
+    background: #dc3545;
+    color: white;
+}
+
+#downloadPdfBtn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
 #printBtn {
     background: #17a2b8;
     color: white;
