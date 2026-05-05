@@ -53,9 +53,12 @@ function getSkillsHTML(wrapInSpans = true) {
     return '<ul>' + skills.map(s => `<li>${s}</li>`).join('') + '</ul>';
 }
 
-function getLanguagesHTML() {
+function getLanguagesHTML(wrapInSpans = false) {
     if (!userData.languages) return '';
     const langs = userData.languages.split(',').map(s => s.trim()).filter(Boolean);
+    if (wrapInSpans) {
+        return langs.map(s => `<span>${s}</span>`).join('');
+    }
     return '<ul>' + langs.map(l => `<li>${l}</li>`).join('') + '</ul>';
 }
 
@@ -434,7 +437,644 @@ const templates = {
             <h3>Languages</h3>
             <p>${userData.languages}</p>
         </div>
-    `
+    `,
+    11: () => `
+        <div class="header">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div>
+                <h1>${userData.name}</h1>
+                <p class="title">${userData.jobTitle}</p>
+                <p>📞 ${userData.phone} | 📧 ${userData.email} | 🏠 ${userData.address}</p>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Profile</h3>
+            <p>${userData.about}</p>
+        </div>
+        <div class="section">
+            <h3>Experience</h3>
+            ${formatMultiline(userData.experience)}
+        </div>
+        <div class="section">
+            <h3>Education</h3>
+            ${formatMultiline(userData.education)}
+        </div>
+        <div class="section">
+            <h3>Skills</h3>
+            <div class="skills-list">${getSkillsHTML(true)}</div>
+        </div>
+        <div class="section">
+            <h3>Languages</h3>
+            <div class="skills-list">${getLanguagesHTML(true)}</div>
+        </div>
+`,
+    12: () => `
+        <div class="header">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div>
+                <h1>${userData.name}</h1>
+                <p class="title">${userData.jobTitle}</p>
+                <p>📞 ${userData.phone} | 📧 ${userData.email} | 🏠 ${userData.address}</p>
+            </div>
+        </div>
+        <div class="body"><div class="section">
+            <h3>Profile</h3>
+            <p>${userData.about}</p>
+        </div>
+        <div class="section">
+            <h3>Experience</h3>
+            ${formatMultiline(userData.experience)}
+        </div>
+        <div class="section">
+            <h3>Education</h3>
+            ${formatMultiline(userData.education)}
+        </div>
+        <div class="section">
+            <h3>Skills</h3>
+            <div class="skills-list">${getSkillsHTML(true)}</div>
+        </div>
+        <div class="section">
+            <h3>Languages</h3>
+            <div class="skills-list">${getLanguagesHTML(true)}</div>
+        </div>
+</div>`,
+    13: () => `
+        <div class="sidebar">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <h1>${userData.name}</h1>
+            <p>${userData.jobTitle}</p>
+            <div class="section">
+                <h3>Contact</h3>
+                <p>📞 ${userData.phone}</p>
+                <p>📧 ${userData.email}</p>
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+        </div>
+`,
+    14: () => `
+        <div class="header">
+            <div class="header-content">
+                <img src="${userData.photo}" class="cv-photo" alt="Photo">
+                <div>
+                    <h1>${userData.name}</h1>
+                    <p>${userData.jobTitle}</p>
+                    <p>${userData.phone} | ${userData.email}</p>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div>
+                <div class="section">
+                    <h3>Profile</h3>
+                    <p>${userData.about}</p>
+                </div>
+                <div class="section">
+                    <h3>Experience</h3>
+                    ${formatMultiline(userData.experience)}
+                </div>
+                <div class="section">
+                    <h3>Education</h3>
+                    ${formatMultiline(userData.education)}
+                </div>
+            </div>
+            <div>
+                <div class="section">
+                    <h3>Skills</h3>
+                    <div class="skills-list">${getSkillsHTML(true)}</div>
+                </div>
+                <div class="section">
+                    <h3>Languages</h3>
+                    <div class="skills-list">${getLanguagesHTML(true)}</div>
+                </div>
+            </div>
+        </div>
+`,
+    15: () => `
+        <div class="top-section">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <h1>${userData.name}</h1>
+            <p>${userData.jobTitle}</p>
+            <p>📞 ${userData.phone} | 📧 ${userData.email}</p>
+        </div>
+        <div class="section">
+            <h3>Profile</h3>
+            <p>${userData.about}</p>
+        </div>
+        <div class="section">
+            <h3>Experience</h3>
+            ${formatMultiline(userData.experience)}
+        </div>
+        <div class="section">
+            <h3>Education</h3>
+            ${formatMultiline(userData.education)}
+        </div>
+        <div class="section">
+            <h3>Skills</h3>
+            <div class="skills-list">${getSkillsHTML(true)}</div>
+        </div>
+        <div class="section">
+            <h3>Languages</h3>
+            <div class="skills-list">${getLanguagesHTML(true)}</div>
+        </div>
+`,
+    16: () => `
+        <div class="main">
+            <h1>${userData.name}</h1>
+            <p>${userData.jobTitle}</p>
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+        </div>
+        <div class="sidebar">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div class="section">
+                <h3>Contact</h3>
+                <p>📞 ${userData.phone}</p>
+                <p>📧 ${userData.email}</p>
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+`,
+    17: () => `
+        <div class="header">
+            <h1>${userData.name}</h1>
+            <p>${userData.jobTitle}</p>
+            <p>${userData.email} | ${userData.phone}</p>
+        </div>
+        <div class="body">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+`,
+    18: () => `
+        <div class="top-card">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div>
+                <h1>${userData.name}</h1>
+                <p>${userData.jobTitle}</p>
+                <p>📞 ${userData.phone} | 📧 ${userData.email}</p>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Profile</h3>
+            <p>${userData.about}</p>
+        </div>
+        <div class="content-grid">
+            <div class="card">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="card">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+            <div class="card">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="card">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+`,
+    19: () => `
+        <div class="header">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <h1>${userData.name}</h1>
+            <p>${userData.jobTitle}</p>
+            <p>${userData.email} | ${userData.phone}</p>
+        </div>
+        <div class="section">
+            <h3>Profile</h3>
+            <p>${userData.about}</p>
+        </div>
+        <div class="section">
+            <h3>Experience</h3>
+            ${formatMultiline(userData.experience)}
+        </div>
+        <div class="section">
+            <h3>Education</h3>
+            ${formatMultiline(userData.education)}
+        </div>
+        <div class="section">
+            <h3>Skills</h3>
+            <div class="skills-list">${getSkillsHTML(true)}</div>
+        </div>
+        <div class="section">
+            <h3>Languages</h3>
+            <div class="skills-list">${getLanguagesHTML(true)}</div>
+        </div>
+`,
+    20: () => `
+        <div class="left">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <h3>Contact</h3>
+            <p>📞 ${userData.phone}</p>
+            <p>📧 ${userData.email}</p>
+            <p>🏠 ${userData.address}</p>
+            <h3>Skills</h3>
+            <div class="skills-list">${getSkillsHTML(true)}</div>
+            <h3>Languages</h3>
+            <div class="skills-list">${getLanguagesHTML(true)}</div>
+        </div>
+        <div class="right">
+            <h1>${userData.name}</h1>
+            <h3>${userData.jobTitle}</h3>
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+        </div>
+`,
+    21: () => `
+        <div class="header">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div>
+                <h1>${userData.name}</h1>
+                <p class="title">${userData.jobTitle}</p>
+                <p>📞 ${userData.phone} | 📧 ${userData.email} | 🏠 ${userData.address}</p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+`,
+    22: () => `
+        <div class="header">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div>
+                <h1>${userData.name}</h1>
+                <p class="title">${userData.jobTitle}</p>
+                <p>📞 ${userData.phone} | 📧 ${userData.email} | 🏠 ${userData.address}</p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+`,
+    23: () => `
+        <div class="header">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div>
+                <h1>${userData.name}</h1>
+                <p class="title">${userData.jobTitle}</p>
+                <p>📞 ${userData.phone} | 📧 ${userData.email} | 🏠 ${userData.address}</p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+`,
+    24: () => `
+        <div class="body">
+            <div class="contact-section">
+                <img src="${userData.photo}" class="cv-photo" alt="Photo" style="width: 150px; border-radius: 50%; margin-bottom: 20px;">
+                <h2>${userData.name}</h2>
+                <p>${userData.jobTitle}</p>
+                <br>
+                <p>📞 ${userData.phone}</p>
+                <p>📧 ${userData.email}</p>
+                <p>🏠 ${userData.address}</p>
+                <br>
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+                <br>
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+            <div>
+                <div class="section">
+                    <h3>Profile</h3>
+                    <p>${userData.about}</p>
+                </div>
+                <div class="section">
+                    <h3>Experience</h3>
+                    ${formatMultiline(userData.experience)}
+                </div>
+                <div class="section">
+                    <h3>Education</h3>
+                    ${formatMultiline(userData.education)}
+                </div>
+            </div>
+        </div>
+`,
+    25: () => `
+        <div class="header">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div>
+                <h1>${userData.name}</h1>
+                <p class="title">${userData.jobTitle}</p>
+                <p>📞 ${userData.phone} | 📧 ${userData.email} | 🏠 ${userData.address}</p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+`,
+    26: () => `
+        <div class="header">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div>
+                <h1>${userData.name}</h1>
+                <p class="title">${userData.jobTitle}</p>
+                <p>📞 ${userData.phone} | 📧 ${userData.email} | 🏠 ${userData.address}</p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+`,
+    27: () => `
+        <div class="header">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div>
+                <h1>${userData.name}</h1>
+                <p class="title">${userData.jobTitle}</p>
+                <p>📞 ${userData.phone} | 📧 ${userData.email} | 🏠 ${userData.address}</p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+`,
+    28: () => `
+        <div class="header">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div>
+                <h1>${userData.name}</h1>
+                <p class="title">${userData.jobTitle}</p>
+                <p>📞 ${userData.phone} | 📧 ${userData.email} | 🏠 ${userData.address}</p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+`,
+    29: () => `
+        <div class="body">
+            <div class="left-panel">
+                <img src="${userData.photo}" class="cv-photo" alt="Photo">
+                <h1>${userData.name}</h1>
+                <p>${userData.jobTitle}</p>
+                <br><br>
+                <p>📞 ${userData.phone}</p>
+                <p>📧 ${userData.email}</p>
+                <p>🏠 ${userData.address}</p>
+            </div>
+            <div class="right-panel">
+                <div class="section">
+                    <h3>Profile</h3>
+                    <p>${userData.about}</p>
+                </div>
+                <div class="section">
+                    <h3>Experience</h3>
+                    ${formatMultiline(userData.experience)}
+                </div>
+                <div class="section">
+                    <h3>Education</h3>
+                    ${formatMultiline(userData.education)}
+                </div>
+                <div class="section">
+                    <h3>Skills</h3>
+                    <div class="skills-list">${getSkillsHTML(true)}</div>
+                </div>
+                <div class="section">
+                    <h3>Languages</h3>
+                    <div class="skills-list">${getLanguagesHTML(true)}</div>
+                </div>
+            </div>
+        </div>
+`,
+    30: () => `
+        <div class="header">
+            <img src="${userData.photo}" class="cv-photo" alt="Photo">
+            <div>
+                <h1>${userData.name}</h1>
+                <p class="title">${userData.jobTitle}</p>
+                <p>📞 ${userData.phone} | 📧 ${userData.email} | 🏠 ${userData.address}</p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="section">
+                <h3>Profile</h3>
+                <p>${userData.about}</p>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                ${formatMultiline(userData.experience)}
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                ${formatMultiline(userData.education)}
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-list">${getSkillsHTML(true)}</div>
+            </div>
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="skills-list">${getLanguagesHTML(true)}</div>
+            </div>
+        </div>
+`
 };
 
 // ============ RENDER CV ============

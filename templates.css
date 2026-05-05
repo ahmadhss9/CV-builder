@@ -666,3 +666,777 @@
     color: #003366;
     font-weight: bold;
 }
+
+/* ============ TEMPLATE 11: BOTANICAL GREEN ============ */
+.template-11 {
+    background: #f4f9f5;
+    color: #2c3e2e;
+    position: relative;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.template-11::before {
+    content: "🌿";
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    font-size: 200px;
+    opacity: 0.06;
+    z-index: 0;
+}
+
+.template-11 .header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 2px solid #4a7c59;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.template-11 .cv-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #4a7c59;
+}
+
+.template-11 h1 {
+    font-size: 2.5rem;
+    color: #4a7c59;
+}
+
+.template-11 .title {
+    font-size: 1.2rem;
+    color: #6a9c79;
+    margin-top: 5px;
+}
+
+.template-11 .section {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 25px;
+}
+
+.template-11 .section h3 {
+    color: #4a7c59;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    border-bottom: 2px solid #a3c4ab;
+    padding-bottom: 5px;
+}
+
+.template-11 .section h3::after {
+    content: " 🍃";
+    font-size: 1rem;
+}
+
+/* ============ TEMPLATE 12: ROSE GOLD ELEGANCE ============ */
+.template-12 {
+    background: #fffafa;
+    color: #4a3b3b;
+    padding: 0;
+    font-family: 'Georgia', serif;
+}
+
+.template-12 .header {
+    background: linear-gradient(135deg, #e6c2bf, #d4a3a3);
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.template-12 .header::before, .template-12 .header::after {
+    content: "🌹";
+    position: absolute;
+    font-size: 60px;
+    opacity: 0.15;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.template-12 .header::before {
+    left: 40px;
+}
+
+.template-12 .header::after {
+    right: 40px;
+}
+
+.template-12 .cv-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 15px;
+}
+
+.template-12 h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+.template-12 .body {
+    padding: 40px;
+}
+
+.template-12 .section {
+    margin-bottom: 25px;
+}
+
+.template-12 .section h3 {
+    color: #c08585;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px dashed #d4a3a3;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.template-12 .skills-list span {
+    background: #fdf5f5;
+    color: #c08585;
+    border: 1px solid #e6c2bf;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin: 4px;
+    display: inline-block;
+}
+
+/* ============ TEMPLATE 13: LAVENDER MINIMALIST ============ */
+.template-13 {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    background: white;
+    color: #4a4a4a;
+}
+
+.template-13 .sidebar {
+    background: #f3f0f8;
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid #e0d8eb;
+}
+
+.template-13 .sidebar::before {
+    content: "🪻";
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    font-size: 150px;
+    opacity: 0.08;
+}
+
+.template-13 .cv-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #b8a9c9;
+}
+
+.template-13 .sidebar h1 {
+    color: #6b5b95;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.template-13 .main-content {
+    padding: 40px;
+}
+
+.template-13 .section {
+    margin-bottom: 30px;
+}
+
+.template-13 .section h3 {
+    color: #6b5b95;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.template-13 .section h3::before {
+    content: "✿";
+    font-size: 0.8rem;
+    color: #b8a9c9;
+}
+
+/* ============ TEMPLATE 14: TROPICAL PALM ============ */
+.template-14 {
+    padding: 0;
+    background: white;
+    color: #333;
+}
+
+.template-14 .header {
+    background: #1a4331;
+    color: #e8f4e5;
+    padding: 50px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-14 .header::before {
+    content: "🌴";
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    font-size: 180px;
+    opacity: 0.1;
+}
+
+.template-14 .header-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.template-14 .cv-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #84c072;
+}
+
+.template-14 h1 {
+    font-size: 2.8rem;
+    color: #84c072;
+}
+
+.template-14 .body {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.template-14 .section h3 {
+    color: #1a4331;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #84c072;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* ============ TEMPLATE 15: CHERRY BLOSSOM ============ */
+.template-15 {
+    background: #fff;
+    padding: 40px;
+    position: relative;
+    border: 8px solid #f9e1e8;
+}
+
+.template-15::before {
+    content: "🌸";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 80px;
+    opacity: 0.15;
+}
+
+.template-15::after {
+    content: "🌸";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 100px;
+    opacity: 0.1;
+}
+
+.template-15 .top-section {
+    text-align: center;
+    border-bottom: 1px solid #f0cadd;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.template-15 .cv-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #e8a5c2;
+    box-shadow: 0 4px 10px rgba(232, 165, 194, 0.3);
+}
+
+.template-15 h1 {
+    color: #d16b9b;
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.template-15 .section {
+    margin-bottom: 25px;
+}
+
+.template-15 .section h3 {
+    color: #d16b9b;
+    background: #fdf5f8;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* ============ TEMPLATE 16: AUTUMN OAK ============ */
+.template-16 {
+    background: #faf6f0;
+    color: #5c4033;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+}
+
+.template-16 .main {
+    padding: 50px;
+}
+
+.template-16 .sidebar {
+    background: #c06c30;
+    color: white;
+    padding: 50px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-16 .sidebar::before {
+    content: "🍁";
+    position: absolute;
+    bottom: 30px;
+    right: -20px;
+    font-size: 160px;
+    opacity: 0.15;
+    transform: rotate(-15deg);
+}
+
+.template-16 .cv-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 20px;
+}
+
+.template-16 .main h1 {
+    color: #c06c30;
+    font-size: 2.8rem;
+}
+
+.template-16 .section {
+    margin-bottom: 30px;
+}
+
+.template-16 .main .section h3 {
+    color: #8b4513;
+    border-bottom: 2px solid #e6b89c;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.template-16 .main .section h3::after {
+    content: " 🍂";
+    font-size: 0.9rem;
+}
+
+/* ============ TEMPLATE 17: DAISY PROFESSIONAL ============ */
+.template-17 {
+    padding: 0;
+    background: white;
+}
+
+.template-17 .header {
+    background: #3b5998;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.template-17 .header::before, .template-17 .header::after {
+    content: "🌼";
+    position: absolute;
+    font-size: 70px;
+    opacity: 0.1;
+    top: 30px;
+}
+
+.template-17 .header::before {
+    left: 50px;
+}
+
+.template-17 .header::after {
+    right: 50px;
+}
+
+.template-17 .cv-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin-top: -80px;
+    margin-bottom: 15px;
+    background: white;
+}
+
+.template-17 .body {
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.template-17 h1 {
+    color: #3b5998;
+    font-size: 2.2rem;
+}
+
+.template-17 .section {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.template-17 .section h3 {
+    color: #3b5998;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* ============ TEMPLATE 18: SUCCULENT MODERN ============ */
+.template-18 {
+    background: #f4f6f5;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.template-18 .top-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-18 .top-card::after {
+    content: "🌵";
+    position: absolute;
+    right: -10px;
+    bottom: -20px;
+    font-size: 120px;
+    opacity: 0.08;
+    transform: rotate(-10deg);
+}
+
+.template-18 .cv-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 15px;
+}
+
+.template-18 h1 {
+    color: #4a6c65;
+    font-size: 2rem;
+}
+
+.template-18 .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.template-18 .card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.template-18 .card h3 {
+    color: #4a6c65;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.template-18 .card h3::before {
+    content: "🪴";
+    font-size: 1.1rem;
+}
+
+/* ============ TEMPLATE 19: LOTUS SERENITY ============ */
+.template-19 {
+    background: linear-gradient(to bottom, #fffdfb, #f5f0f6);
+    padding: 50px;
+    color: #4a4a4a;
+}
+
+.template-19 .header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.template-19 .header::before {
+    content: "🪷";
+    display: block;
+    font-size: 40px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.template-19 .cv-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #d4b5b0;
+    margin-bottom: 15px;
+}
+
+.template-19 h1 {
+    font-size: 2.2rem;
+    color: #8c6a7b;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    letter-spacing: 1px;
+}
+
+.template-19 .section {
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #d4b5b0;
+}
+
+.template-19 .section h3 {
+    color: #8c6a7b;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* ============ TEMPLATE 20: EUCALYPTUS MINIMAL ============ */
+.template-20 {
+    display: flex;
+    background: white;
+}
+
+.template-20 .left {
+    width: 35%;
+    background: #e9ece7;
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-20 .left::before {
+    content: "🌱";
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+    font-size: 180px;
+    opacity: 0.1;
+}
+
+.template-20 .right {
+    width: 65%;
+    padding: 50px 40px;
+}
+
+.template-20 .cv-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #7c8e76;
+}
+
+.template-20 h1 {
+    color: #4b5945;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.template-20 h3 {
+    color: #7c8e76;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.template-20 .left h3 {
+    border-bottom: 1px solid #cbd2c6;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+.template-20 .right h3 {
+    border-bottom: 2px solid #e9ece7;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.template-20 .right .section:first-child h3 {
+    margin-top: 0;
+}
+
+/* ============ SKILLS BUBBLES FOR 11-30 ============ */
+.template-11 .skills-list span, .template-12 .skills-list span, .template-13 .skills-list span, .template-14 .skills-list span, .template-15 .skills-list span, .template-16 .skills-list span, .template-17 .skills-list span, .template-18 .skills-list span, .template-19 .skills-list span, .template-20 .skills-list span,
+.template-21 .skills-list span, .template-22 .skills-list span, .template-23 .skills-list span, .template-24 .skills-list span, .template-25 .skills-list span, .template-26 .skills-list span, .template-27 .skills-list span, .template-28 .skills-list span, .template-29 .skills-list span, .template-30 .skills-list span {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.template-11 .skills-list span { background: #e0eee4; color: #4a7c59; border: 1px solid #4a7c59; }
+.template-12 .skills-list span { background: #fdf5f5; color: #c08585; border: 1px solid #e6c2bf; }
+.template-13 .skills-list span { background: #e8e3f0; color: #6b5b95; border: 1px solid #b8a9c9; }
+.template-14 .skills-list span { background: #e8f4e5; color: #1a4331; border: 1px solid #84c072; }
+.template-15 .skills-list span { background: #fdf5f8; color: #d16b9b; border: 1px solid #f0cadd; }
+.template-16 .skills-list span { background: #f0ddd1; color: #8b4513; border: 1px solid #c06c30; }
+.template-17 .skills-list span { background: #ebf0fa; color: #3b5998; border: 1px solid #cbd5e1; }
+.template-18 .skills-list span { background: #e6f0ed; color: #4a6c65; border: 1px solid #4a6c65; }
+.template-19 .skills-list span { background: #fdfafb; color: #8c6a7b; border: 1px solid #d4b5b0; }
+.template-20 .skills-list span { background: #e9ece7; color: #4b5945; border: 1px solid #7c8e76; }
+
+/* ============ TEMPLATE 21: Executive Slate ============ */
+.template-21 { font-family: 'Georgia', serif; background: #f8f9fa; color: #212529; }
+.template-21 .header { background: #2c3e50; color: #fff; padding: 50px 40px; display: flex; align-items: center; gap: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.template-21 .cv-photo { width: 140px; height: 140px; border-radius: 5px; border: 4px solid #95a5a6; }
+.template-21 h1 { font-size: 2.5rem; letter-spacing: 1px; color: #ecf0f1; }
+.template-21 .title { color: #bdc3c7; font-size: 1.2rem; font-style: italic; }
+.template-21 .body { padding: 40px; }
+.template-21 .section { margin-bottom: 30px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+.template-21 .section h3 { border-bottom: 2px solid #34495e; padding-bottom: 8px; margin-bottom: 15px; color: #2c3e50; text-transform: uppercase; letter-spacing: 1px; }
+.template-21 .skills-list span { background: #ecf0f1; color: #2c3e50; border: 1px solid #bdc3c7; }
+
+/* ============ TEMPLATE 22: Developer Dark ============ */
+.template-22 { font-family: 'Consolas', 'Courier New', monospace; background: #1e1e1e; color: #d4d4d4; }
+.template-22 .header { padding: 40px; background: #252526; border-bottom: 2px solid #007acc; display: flex; align-items: center; gap: 30px; }
+.template-22 .cv-photo { width: 130px; height: 130px; border-radius: 50%; border: 3px solid #007acc; }
+.template-22 h1 { color: #569cd6; font-size: 2.2rem; }
+.template-22 .title { color: #4ec9b0; font-size: 1.1rem; }
+.template-22 .body { padding: 40px; }
+.template-22 .section { margin-bottom: 25px; padding-left: 15px; border-left: 2px solid #333; }
+.template-22 .section h3 { color: #ce9178; margin-bottom: 15px; font-size: 1.3rem; }
+.template-22 .section h3::before { content: "const "; color: #569cd6; font-size: 1rem; }
+.template-22 .section h3::after { content: " = {"; color: #d4d4d4; }
+.template-22 .skills-list span { background: #2d2d2d; color: #dcdcaa; border: 1px solid #404040; border-radius: 3px; }
+
+/* ============ TEMPLATE 23: Creative Designer ============ */
+.template-23 { font-family: 'Futura', sans-serif; background: #fff; color: #333; }
+.template-23 .header { padding: 50px 40px; background: linear-gradient(135deg, #ff007f, #7f00ff); color: white; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.template-23 .cv-photo { width: 150px; height: 150px; border-radius: 50%; border: 5px solid white; margin-bottom: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.template-23 h1 { font-size: 3rem; font-weight: 800; letter-spacing: 2px; }
+.template-23 .title { font-size: 1.2rem; background: white; color: #ff007f; padding: 5px 15px; border-radius: 20px; margin-top: 10px; font-weight: bold; }
+.template-23 .body { padding: 40px; columns: 2; column-gap: 40px; }
+.template-23 .section { break-inside: avoid; margin-bottom: 30px; background: #fafafa; padding: 20px; border-radius: 15px; border-left: 5px solid #7f00ff; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.template-23 .section h3 { color: #7f00ff; font-size: 1.4rem; margin-bottom: 15px; display: inline-block; position: relative; }
+.template-23 .skills-list span { background: #fff0f5; color: #ff007f; border: 1px solid #ffb6c1; font-weight: bold; }
+
+/* ============ TEMPLATE 24: Project Manager ============ */
+.template-24 { font-family: 'Arial', sans-serif; background: #fdfdfd; color: #444; display: flex; flex-direction: column; }
+.template-24 .body { display: grid; grid-template-columns: 320px 1fr; min-height: 1100px; }
+.template-24 .contact-section { background: #2c3e50; color: white; padding: 40px 30px; text-align: center; }
+.template-24 .contact-section h2 { font-size: 2rem; margin: 15px 0 5px; color: #ecf0f1; }
+.template-24 .contact-section h3 { color: #3498db; margin-top: 30px; margin-bottom: 15px; font-size: 1.2rem; border-bottom: 1px solid #34495e; padding-bottom: 5px; }
+.template-24 .contact-section p { margin-bottom: 10px; font-size: 0.95rem; text-align: left; }
+.template-24 .section { padding: 30px 40px; margin-bottom: 10px; }
+.template-24 .section h3 { color: #e74c3c; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px; margin-bottom: 15px; text-transform: uppercase; font-size: 1.3rem; }
+.template-24 .skills-list span { background: rgba(255,255,255,0.1); color: #ecf0f1; border: 1px solid #7f8c8d; }
+
+/* ============ TEMPLATE 25: Minimalist Pro ============ */
+.template-25 { font-family: 'Helvetica Neue', sans-serif; background: #fff; color: #111; padding: 60px; }
+.template-25 .header { border-bottom: 2px solid #000; padding-bottom: 30px; margin-bottom: 40px; display: flex; align-items: center; gap: 40px; }
+.template-25 .cv-photo { width: 120px; height: 120px; filter: grayscale(100%); border-radius: 5px; }
+.template-25 h1 { font-weight: 300; font-size: 3.5rem; letter-spacing: -1px; margin-bottom: 5px; }
+.template-25 .title { font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; color: #555; }
+.template-25 .section { margin-bottom: 40px; }
+.template-25 .section h3 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 4px; color: #000; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.template-25 .skills-list span { background: #000; color: #fff; border-radius: 0; padding: 6px 15px; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1.5px; }
+
+/* ============ TEMPLATE 26: Timeline Classic ============ */
+.template-26 { font-family: 'Lora', serif; background: #faf9f6; color: #333; }
+.template-26 .header { text-align: center; padding: 50px; background: #e8e6df; border-bottom: 5px solid #d4d2cb; }
+.template-26 .cv-photo { width: 140px; height: 140px; border-radius: 50%; border: 5px solid #fff; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.template-26 h1 { font-size: 2.8rem; color: #2c2c2c; }
+.template-26 .title { font-size: 1.2rem; color: #666; font-style: italic; }
+.template-26 .body { padding: 50px; }
+.template-26 .section { margin-bottom: 35px; padding-left: 30px; border-left: 3px solid #d4d2cb; position: relative; }
+.template-26 .section::before { content: ""; position: absolute; left: -10px; top: 5px; width: 17px; height: 17px; border-radius: 50%; background: #8b8982; border: 3px solid #faf9f6; }
+.template-26 .section h3 { color: #8b8982; margin-bottom: 15px; font-size: 1.4rem; text-transform: uppercase; letter-spacing: 1px; }
+.template-26 .skills-list span { background: #fff; color: #555; border: 1px solid #d4d2cb; border-radius: 5px; }
+
+/* ============ TEMPLATE 27: Corporate Blue ============ */
+.template-27 { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; color: #444; }
+.template-27 .header { background: #0055a4; color: white; padding: 50px 40px; display: flex; align-items: center; gap: 30px; }
+.template-27 .cv-photo { width: 140px; height: 140px; border-radius: 8px; border: 4px solid #6699cc; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.template-27 h1 { font-size: 2.8rem; }
+.template-27 .title { font-size: 1.2rem; color: #b3d9ff; }
+.template-27 .body { padding: 40px; background: white; margin: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.template-27 .section { margin-bottom: 30px; }
+.template-27 .section h3 { color: #0055a4; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px; margin-bottom: 15px; display: flex; align-items: center; font-size: 1.3rem; }
+.template-27 .section h3::before { content: "■"; color: #0055a4; margin-right: 10px; font-size: 1em; }
+.template-27 .skills-list span { background: #e6f2ff; color: #0055a4; border: 1px solid #b3d9ff; border-radius: 4px; font-weight: bold; }
+
+/* ============ TEMPLATE 28: Premium Dark ============ */
+.template-28 { font-family: 'Montserrat', sans-serif; background: #121212; color: #e0e0e0; }
+.template-28 .header { padding: 50px; background: linear-gradient(90deg, #1f1f1f, #2c2c2c); display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; border-bottom: 2px solid #bb86fc; }
+.template-28 .cv-photo { width: 150px; height: 150px; border-radius: 50%; border: 4px solid #bb86fc; box-shadow: 0 0 20px rgba(187, 134, 252, 0.4); }
+.template-28 h1 { color: #bb86fc; font-weight: 700; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+.template-28 .title { color: #03dac6; font-size: 1.2rem; letter-spacing: 2px; }
+.template-28 .body { padding: 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.template-28 .section { background: #1e1e1e; padding: 25px; border-radius: 10px; border-top: 3px solid #03dac6; }
+.template-28 .section h3 { color: #03dac6; margin-bottom: 20px; font-weight: 600; letter-spacing: 1px; font-size: 1.2rem; }
+.template-28 .skills-list span { background: #2c2c2c; color: #bb86fc; border: 1px solid #bb86fc; border-radius: 8px; }
+
+/* ============ TEMPLATE 29: Modern Split ============ */
+.template-29 { font-family: 'Roboto', sans-serif; display: flex; background: #fff; }
+.template-29 .body { display: flex; width: 100%; min-height: 1100px; }
+.template-29 .left-panel { width: 35%; background: linear-gradient(180deg, #00796b, #004d40); color: white; padding: 50px 30px; text-align: center; }
+.template-29 .cv-photo { width: 160px; height: 160px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.3); margin-bottom: 25px; }
+.template-29 .left-panel h1 { font-size: 2.2rem; margin-bottom: 10px; font-weight: 700; }
+.template-29 .left-panel .title { font-size: 1.1rem; color: #b2dfdb; margin-bottom: 30px; }
+.template-29 .right-panel { width: 65%; padding: 50px; background: #fafafa; }
+.template-29 .section { margin-bottom: 35px; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+.template-29 .right-panel h3 { color: #00796b; text-transform: uppercase; font-weight: 800; border-bottom: 2px solid #e0f2f1; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.3rem; }
+.template-29 .skills-list span { background: #e0f2f1; color: #00695c; border: 1px solid #b2dfdb; border-radius: 15px; }
+
+/* ============ TEMPLATE 30: Elegant Serif ============ */
+.template-30 { font-family: 'Playfair Display', serif; background: #fffdf9; color: #2b2b2b; padding: 0 50px; }
+.template-30 .header { text-align: center; padding: 70px 0 40px; border-bottom: 2px solid #d4c4b7; position: relative; }
+.template-30 .cv-photo { width: 130px; height: 130px; border-radius: 50%; position: absolute; top: 40px; left: 0; border: 3px solid #d4c4b7; }
+.template-30 h1 { font-size: 4rem; font-style: italic; font-weight: 600; margin-bottom: 10px; color: #4a3c31; }
+.template-30 .title { text-transform: uppercase; letter-spacing: 5px; font-size: 1rem; font-family: 'Montserrat', sans-serif; color: #8b7d71; }
+.template-30 .body { padding: 40px 0; }
+.template-30 .section { margin-bottom: 40px; }
+.template-30 .section h3 { font-size: 1.8rem; font-style: italic; font-weight: 600; color: #4a3c31; margin-bottom: 20px; display: inline-block; border-bottom: 1px solid #d4c4b7; padding-bottom: 5px; }
+.template-30 .skills-list span { background: #fff; color: #4a3c31; border: 1px solid #d4c4b7; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; border-radius: 0; }
+
