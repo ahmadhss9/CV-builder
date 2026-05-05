@@ -1158,6 +1158,40 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
     }
 });
 
+// ============ DOWNLOAD AS PDF ============
+document.getElementById('downloadPdfBtn').addEventListener('click', () => {
+    const btn = document.getElementById('downloadPdfBtn');
+    const originalText = btn.textContent;
+    btn.textContent = '⏳ Generating...';
+    btn.disabled = true;
+
+    const cvElement = document.getElementById('cvPreview');
+    const fileName = `CV_${userData.name.replace(/\s+/g, '_')}_Template${currentTemplate}.pdf`;
+    
+    // We adjust scale to fit standard A4 depending on template dimensions, 
+    // html2pdf automatically handles canvas conversion and pdf generation
+    const opt = {
+        margin:       0,
+        filename:     fileName,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
+        jsPDF:        { unit: 'px', format: [800, 1100], orientation: 'portrait' }
+    };
+
+    html2pdf().set(opt).from(cvElement).save().then(() => {
+        btn.textContent = '✅ Downloaded!';
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.disabled = false;
+        }, 2000);
+    }).catch(err => {
+        console.error('PDF generation error:', err);
+        alert('Error generating PDF. Please try again.');
+        btn.textContent = originalText;
+        btn.disabled = false;
+    });
+});
+
 // ============ PRINT ============
 document.getElementById('printBtn').addEventListener('click', () => {
     const cvHTML = document.getElementById('cvPreview').outerHTML;
