@@ -1130,12 +1130,17 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
     try {
         const cvElement = document.getElementById('cvPreview');
         
+        // Reset scroll position to avoid blank captures
+        window.scrollTo(0, 0);
+        
         const canvas = await html2canvas(cvElement, {
             scale: 2, // Higher quality
             useCORS: true,
             allowTaint: true,
             backgroundColor: '#ffffff',
-            logging: false
+            logging: false,
+            scrollY: 0,
+            scrollX: 0
         });
 
         // Convert to PNG and download
@@ -1170,12 +1175,14 @@ document.getElementById('downloadPdfBtn').addEventListener('click', () => {
     
     // We adjust scale to fit standard A4 depending on template dimensions, 
     // html2pdf automatically handles canvas conversion and pdf generation
+    window.scrollTo(0, 0);
+    
     const opt = {
         margin:       0,
         filename:     fileName,
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
-        jsPDF:        { unit: 'px', format: [800, 1100], orientation: 'portrait' }
+        html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#ffffff', scrollY: 0, scrollX: 0 },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
     html2pdf().set(opt).from(cvElement).save().then(() => {
